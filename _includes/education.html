@@ -1,0 +1,47 @@
+<div class="feature__wrapper">
+  <center>
+    <h1>My education</h1>
+  </center>
+  {% assign count = 0 %}
+  {% for diploma in site.data.education %}
+
+    <!-- Sanitize school logo url -->
+    {% if diploma.school_logo_url contains "://" %}
+      {% capture school_logo_img %}{{ diploma.school_logo_url }}{% endcapture %}
+    {% else %}
+      {% capture school_logo_img %}{{ diploma.school_logo_url | absolute_url }}{% endcapture %}
+    {% endif %}
+
+    {% assign pair = count | modulo : 2 %}
+
+    <div class="feature__item{% if pair == 0 %}--left{% else %}--right{% endif %}">
+      <div class="archive__item">
+        {% if diploma.school_logo_url %}
+          <div class="archive__item-teaser">
+            <img src=
+              {% if diploma.logo contains "://" %}
+                "{{ school_logo_img }}"
+              {% else %}
+                "{{ school_logo_img | absolute_url }}"
+              {% endif %}>
+          </div>
+        {% endif %}
+
+        <div class="archive__item-body">
+            <h2 class="archive__item-title" style="text-align: center;">{{ diploma.degree }}</h2>
+            <h3 style="margin-top: 0;">{{ diploma.school_name }}</h3>
+            <h4 style="margin-top: 0; font-size: medium;">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              {{ diploma.school_location }}
+            </h4>
+            <div class="archive__item-excerpt">
+              {{ diploma.summary | markdownify }}
+            </div>
+        </div>
+      </div>
+      <br/  >
+    </div>
+    {% assign count = count | plus: 1 %}
+  {% endfor %}
+
+</div>
