@@ -1,0 +1,29 @@
+#Skills
+-   name:             C++
+    level:
+    keywords:
+    x:                -5
+    y:                0
+    radius:           10
+    backgroundColor:  rgb(255, 99, 132)
+-   name:             OpenGL
+    level:
+    keywords:
+    x:                0
+    y:                5
+    radius:           20
+    backgroundColor:  rgb(99, 255, 132)
+-   name:             Vulkan
+    level:
+    keywords:
+    x:                5
+    y:                0
+    radius:           30
+    backgroundColor:  rgb(99, 132, 255)
+-   name:             Git
+    level:
+    keywords:
+    x:                0
+    y:                -5
+    radius:           40
+    backgroundColor:  rgb(132, 0, 132)
