@@ -5,91 +5,10 @@
     <h1>My skills</h1>
   </center>
 
-  <canvas id="skills" style="position: relative; height:150px; width:150px"></canvas>
-
-  <script>
-    // Define a plugin to provide data labels
-    Chart.plugins.register({
-      afterDatasetsDraw: function(chart, easing) {
-        // To only draw at the end of animation, check for easing === 1
-        var ctx = chart.ctx;
-
-        chart.data.datasets.forEach(function(dataset, i) {
-          var meta = chart.getDatasetMeta(i);
-          if (!meta.hidden) {
-            meta.data.forEach(function(element, index) {
-              // Draw the text in black, with the specified font
-              ctx.fillStyle = '#494e52';
-
-              var fontSize = 20;
-              var fontStyle = 'bold';
-              var fontFamily = '-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif';
-              ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-
-              // Just naively convert to string for now
-              var dataString = dataset.label.toString();
-
-              // Make sure alignment settings are correct
-              ctx.textAlign = 'center';
-              ctx.textBaseline = 'middle';
-
-              var padding = 5;
-              var position = element.tooltipPosition();
-              ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
-            });
-          }
-        });
-      }
-    });
-
-    var data = {
-      datasets: [
-        {% for skill in site.data.skills %}
-        {
-        label: "{{ skill.name }}",
-        data: [{
-          x: {{ skill.x }},
-          y: {{ skill.y }},
-          r: {{ skill.radius }}
-        }],
-        backgroundColor: "{{ skill.backgroundColor }}"
-      } {% unless forloop.last %}, {% endunless %}
-      {% endfor %}
-      ]
-    };
-
-    var options = {
-      responsive: true,
-      maintainAspectRatio: true,
-      layout: {
-        padding: 50
-      },
-      legend: {
-        display: false
-      },
-      scales: {
-        xAxes: [{
-          display: false,
-          gridLines: {
-            display: false
-          }
-        }],
-        yAxes: [{
-          display: false,
-          gridLines: {
-            display: false
-          }
-        }]
-      },
-      tooltips: {
-        enabled: false
-      }
-    };
-
-    new Chart(document.getElementById("skills"), {
-      type: "bubble",
-      data: data,
-      options: options
-    });
-  </script>
+  {% for skill in site.data.skills %}
+    <h2>{{ skill.name }}</h2>
+    {% for keyword in skill.keywords %}
+      <span class="badge" style="background-color: #aaff">{{ keyword }}</span>
+    {% endfor %}
+  {% endfor %}
 </div>
