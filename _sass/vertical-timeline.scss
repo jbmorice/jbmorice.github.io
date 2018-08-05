@@ -1,352 +1,423 @@
-@import 'vertical-timeline/vendor/bourbon/bourbon'; // http://bourbon.io/
+// Copyright 2018 Amber Creative Lab Ltd, CodyHouse.co
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification,
+// are permitted provided that the following conditions are met:
+//
+//  - Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//
+//  - Redistributions in binary form must reproduce the above copyright notice,
+//    this list of conditions and the following disclaimer in the documentation
+//    and/or other materials provided with the distribution.
 
-@import 'vertical-timeline/variables'; // colors, fonts etc...
+//  - Neither the name of the copyright holder nor the names of its contributors may
+//    be used to endorse or promote products derived from this software without
+//    specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+// ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+// WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+// DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+// ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+// (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+// LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+// ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+// SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-@import 'vertical-timeline/mixins'; // custom mixins
-
-@import 'vertical-timeline/layout'; // responsive grid and media queries
-
-/* --------------------------------
-
-Modules - reusable parts of our design
-
+/* -------------------------------- 
+Patterns - reusable parts of our design
 -------------------------------- */
-
-.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-	width: 90%;
-	max-width: $L; // breakpoints inside partials > _layout.scss
-	margin: 0 auto;
-
-	&::after { /* clearfix */
-		content: '';
-		display: table;
-		clear: both;
-	}
+@media only screen and (min-width: 1170px) {
+  .cd-is-hidden {
+    visibility: hidden;
+  }
 }
 
-/* --------------------------------
-
-Main components
-
+/* -------------------------------- 
+Vertical Timeline - by CodyHouse.co
 -------------------------------- */
+
+// -----
+// rem fallback - credits: http://zerosixthree.se/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+// -----
 
 header {
 	height: 200px;
 	line-height: 200px;
 	text-align: center;
-	background: $color-1;
+	background: $text-color;
+}
 
-	h1 {
-		color: $color-3;
-		@include font-size(18px);
-	}
+header h1 {
+	color: $lighter-gray;
+	@include font-size(18px);
+}
 
-	@include MQ(L) {
+@media only screen and (min-width: 1170px) {
+	header {
 		height: 300px;
 		line-height: 300px;
-
-		h1 {
-			@include font-size(24px);
-		}
+	}
+	header h1 {
+		@include font-size(24px);
 	}
 }
 
-#cd-timeline {
+.cd-timeline {
+	overflow: hidden;
+	margin: 2em auto;
+}
+
+.cd-timeline__container {
 	position: relative;
+	width: 90%;
+	max-width: 1170px;
+	margin: 0 auto;
 	padding: 2em 0;
-	margin: {
-		top: 2em;
-		bottom: 2em;
+}
+
+.cd-timeline__container::before {
+	/* this is the vertical line */
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 18px;
+	height: 100%;
+	width: 4px;
+	background: darken($background-color, 5%);
+}
+
+@media only screen and (min-width: 1170px) {
+	.cd-timeline {
+		margin-top: 3em;
+		margin-bottom: 3em;
 	}
-
-	&::before {
-		/* this is the vertical line */
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 18px;
-		height: 100%;
-		width: 4px;
-		background: darken($background, 5%);
-	}
-
-	@include MQ(L) {
-		margin: {
-			top: 3em;
-			bottom: 3em;
-		}
-
-		&::before {
-			left: 50%;
-			margin-left: -2px;
-		}
+	.cd-timeline__container::before {
+		left: 50%;
+		margin-left: -2px;
 	}
 }
 
-.cd-timeline-block {
+.cd-timeline__block {
 	position: relative;
 	margin: 2em 0;
-	@include clearfix;
+}
 
-	&:first-child {
-		margin-top: 0;
-	}
+.cd-timeline__block:after {
+	/* clearfix */
+	content: "";
+	display: table;
+	clear: both;
+}
 
-	&:last-child {
-		margin-bottom: 0;
-	}
+.cd-timeline__block:first-child {
+	margin-top: 0;
+}
 
-	@include MQ(L) {
+.cd-timeline__block:last-child {
+	margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1170px) {
+	.cd-timeline__block {
 		margin: 4em 0;
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
 	}
 }
 
-.cd-timeline-img {
+.cd-timeline__img {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	box-shadow: 0 0 0 4px $color-3, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
-	background: $color-2;
+	-webkit-box-shadow: 0 0 0 4px $lighter-gray, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 0 0 4px $lighter-gray, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+	background: $darker-gray;
+}
 
-	img {
-		color: $color-3;
-		display: block;
-		width: 24px;
-		height: 24px;
-		position: relative;
-		left: 50%;
-		top: 50%;
-		margin-left: -12px;
-		margin-top: -12px;
-	}
+.cd-timeline__img img {
+	display: block;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	margin-left: -12px;
+	margin-top: -12px;
+}
 
-	i {
-		color: $color-3;
-		display: block;
-		width: 24px;
-		height: 24px;
-		position: relative;
-		left: 50%;
-		top: 50%;
-		margin-left: -12px;
-		margin-top: -12px;
-	}
-
-	@include MQ(L) {
+@media only screen and (min-width: 1170px) {
+	.cd-timeline__img {
 		width: 60px;
 		height: 60px;
 		left: 50%;
 		margin-left: -30px;
-
-		/* Force Hardware Acceleration in WebKit */
+		/* Force Hardware Acceleration */
 		-webkit-transform: translateZ(0);
-		-webkit-backface-visibility: hidden;
-
-		.cssanimations &.is-hidden {
-			visibility: hidden;
-		}
-
-		.cssanimations &.bounce-in {
-			visibility: visible;
-			@include animation(cd-bounce-1 .6s);
-		}
+		transform: translateZ(0);
+	}
+	.cd-timeline__img.cd-timeline__img--bounce-in {
+		visibility: visible;
+		-webkit-animation: cd-bounce-1 0.6s;
+		animation: cd-bounce-1 0.6s;
 	}
 }
 
-@include keyframes(cd-bounce-1) {
+@-webkit-keyframes cd-bounce-1 {
 	0% {
 		opacity: 0;
-		@include transform(scale(.5));
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
 	}
-
 	60% {
 		opacity: 1;
-		@include transform(scale(1.2));
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
 	}
-
 	100% {
-		@include transform(scale(1));
+		-webkit-transform: scale(1);
+		transform: scale(1);
 	}
 }
 
-.cd-timeline-content {
+@keyframes cd-bounce-1 {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+.cd-timeline__content {
 	position: relative;
 	margin-left: 60px;
-	background: $color-3;
-	@include border-radius;
+	background: $lighter-gray;
+	border-radius: 0.25em;
 	padding: 1em;
-	box-shadow: 0 3px 0 darken($background, 5%);
-	@include clearfix;
+	-webkit-box-shadow: 0 3px 0 darken($background-color, 5%);
+	box-shadow: 0 3px 0 darken($background-color, 5%);
+}
 
-	h2, h3 {
-		margin: auto;
-		color: $color-1;
+.cd-timeline__content:after {
+	/* clearfix */
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.cd-timeline__content::before {
+	/* triangle next to content block */
+	content: '';
+	position: absolute;
+	top: 16px;
+	right: 100%;
+	height: 0;
+	width: 0;
+	border: 7px solid transparent;
+	border-right: 7px solid $lighter-gray;
+}
+
+.cd-timeline__content h2 h3 {
+	margin: auto;
+	color: $text-color;
+}
+
+.cd-timeline__content h4 {
+	margin-top: 0.5em;
+	color: lighten($text-color, 20%);
+}
+
+.cd-timeline__content p,
+.cd-timeline__read-more,
+.cd-timeline__date {
+	@include font-size(13px);
+}
+
+.cd-timeline__content p {
+	margin: 1em 0;
+	line-height: 1.6;
+}
+
+.cd-timeline__read-more,
+.cd-timeline__date {
+	display: inline-block;
+}
+
+.cd-timeline__read-more {
+	float: right;
+	padding: .8em 1em;
+	background: $link-color;
+	color: $lighter-gray;
+	border-radius: 0.25em;
+}
+
+.cd-timeline__read-more:hover {
+	background-color: lighten($link-color, 5%);
+}
+
+.cd-timeline__date {
+	float: left;
+	padding: .8em 0;
+	opacity: .7;
+}
+
+@media only screen and (min-width: 768px) {
+	.cd-timeline__content h2 {
+		@include font-size(20px);
 	}
-
-	h4 {
-		margin-top: 0.5em;
-		color: lighten($color-1, 20%);
+	.cd-timeline__content p {
+		@include font-size(16px);
 	}
-
-	p, .cd-read-more, .cd-date {
-		@include font-size(13px);
+	.cd-timeline__read-more,
+	.cd-timeline__date {
+		@include font-size(14px);
 	}
+}
 
-	.cd-read-more, .cd-date {
-		display: inline-block;
-	}
-
-	p {
-		margin: 1em 0;
-		line-height: 1.6;
-	}
-
-	.cd-read-more {
-		float: right;
-		padding: .8em 1em;
-		background: $link;
-		color: $color-3;
-		@include border-radius;
-
-		.no-touch &:hover {
-			background-color: lighten($link, 5%);
-		}
-	}
-
-	.cd-date {
-		float: left;
-		padding: .8em 0;
-		opacity: .7;
-	}
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 16px;
-		right: 100%;
-		height: 0;
-		width: 0;
-		border: 7px solid transparent;
-		border-right: 7px solid $color-3;
-	}
-
-	@include MQ(M) {
-		h2 {
-			@include font-size(20px);
-		}
-
-		p {
-			@include font-size(16px);
-		}
-
-		.cd-read-more, .cd-date {
-			@include font-size(14px);
-		}
-	}
-
-	@include MQ(L) {
+@media only screen and (min-width: 1170px) {
+	.cd-timeline__content {
 		margin-left: 0;
 		padding: 1.6em;
 		width: 45%;
-
-		&::before {
-			top: 24px;
-			left: 100%;
-			border-color: transparent;
-			border-left-color: $color-3;
-		}
-
-		.cd-read-more {
-			float: left;
-		}
-
-		.cd-date {
-			position: absolute;
-			width: 100%;
-			left: 122%;
-			top: 6px;
-			@include font-size(16px);
-		}
-
-		.cd-timeline-block:nth-child(even) & {
-			float: right;
-
-			&::before {
-				top: 24px;
-				left: auto;
-				right: 100%;
-				border-color: transparent;
-				border-right-color: $color-3;
-			}
-
-			.cd-read-more {
-				float: right;
-			}
-
-			.cd-date {
-				left: auto;
-				right: 122%;
-				text-align: right;
-			}
-		}
-
-		.cssanimations &.is-hidden {
-			visibility: hidden;
-		}
-
-		.cssanimations &.bounce-in {
-			visibility: visible;
-			@include animation(cd-bounce-2 .6s);
-		}
+		/* Force Hardware Acceleration */
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+	}
+	.cd-timeline__content::before {
+		top: 24px;
+		left: 100%;
+		border-color: transparent;
+		border-left-color: $lighter-gray;
+	}
+	.cd-timeline__read-more {
+		float: left;
+	}
+	.cd-timeline__date {
+		position: absolute;
+		width: 100%;
+		left: 122%;
+		top: 6px;
+		@include font-size(16px);
+	}
+	.cd-timeline__block:nth-child(even) .cd-timeline__content {
+		float: right;
+	}
+	.cd-timeline__block:nth-child(even) .cd-timeline__content::before {
+		top: 24px;
+		left: auto;
+		right: 100%;
+		border-color: transparent;
+		border-right-color: $lighter-gray;
+	}
+	.cd-timeline__block:nth-child(even) .cd-timeline__read-more {
+		float: right;
+	}
+	.cd-timeline__block:nth-child(even) .cd-timeline__date {
+		left: auto;
+		right: 122%;
+		text-align: right;
+	}
+	.cd-timeline__content.cd-timeline__content--bounce-in {
+		visibility: visible;
+		-webkit-animation: cd-bounce-2 0.6s;
+		animation: cd-bounce-2 0.6s;
 	}
 }
 
-@include MQ(L) {
+@media only screen and (min-width: 1170px) {
 	/* inverse bounce effect on even content blocks */
-	.cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
-		@include animation(cd-bounce-2-inverse .6s);
+	.cd-timeline__block:nth-child(even) .cd-timeline__content.cd-timeline__content--bounce-in {
+		-webkit-animation: cd-bounce-2-inverse 0.6s;
+		animation: cd-bounce-2-inverse 0.6s;
 	}
 }
 
-@include keyframes(cd-bounce-2) {
+@-webkit-keyframes cd-bounce-2 {
 	0% {
 		opacity: 0;
-		@include transform(translateX(-100px));
+		-webkit-transform: translateX(-100px);
+		transform: translateX(-100px);
 	}
-
 	60% {
 		opacity: 1;
-		@include transform(translateX(20px));
+		-webkit-transform: translateX(20px);
+		transform: translateX(20px);
 	}
-
 	100% {
-		@include transform(translateX(0));
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
 	}
 }
 
-@include keyframes(cd-bounce-2-inverse) {
+@keyframes cd-bounce-2 {
 	0% {
 		opacity: 0;
-		@include transform(translateX(100px));
+		-webkit-transform: translateX(-100px);
+		transform: translateX(-100px);
 	}
-
 	60% {
 		opacity: 1;
-		@include transform(translateX(-20px));
+		-webkit-transform: translateX(20px);
+		transform: translateX(20px);
 	}
-
 	100% {
-		@include transform(translateX(0));
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@-webkit-keyframes cd-bounce-2-inverse {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(100px);
+		transform: translateX(100px);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translateX(-20px);
+		transform: translateX(-20px);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@keyframes cd-bounce-2-inverse {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(100px);
+		transform: translateX(100px);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translateX(-20px);
+		transform: translateX(-20px);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
 	}
 }
