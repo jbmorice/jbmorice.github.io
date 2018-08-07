@@ -1,5 +1,5 @@
 ---
-title     : "Home"
+title     : "Jean-Baptiste Morice's Resume"
 layout    : resume
 permalink : /
 
