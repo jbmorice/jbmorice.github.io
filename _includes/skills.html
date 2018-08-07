@@ -1,14 +1,16 @@
-<script src="/assets/js/Chart.js"></script>
-
 <div class="feature__wrapper">
   <center>
     <h1>My skills</h1>
   </center>
 
   {% for skill in site.data.skills %}
-    <h2>{{ skill.name }}</h2>
+    <h3 style="margin: 0.5em 0 0.5em;">{{ skill.name }}</h3>
     {% for keyword in skill.keywords %}
-      <span class="badge" style="background-color: #aaff">{{ keyword }}</span>
+      {% if skill.color %}
+        <span class="badge" style="background-color: {{ skill.color }}; color: white;">{{ keyword }}</span>
+      {% else %}
+        <span class="badge">{{ keyword }}</span>
+      {% endif %}
     {% endfor %}
   {% endfor %}
 </div>

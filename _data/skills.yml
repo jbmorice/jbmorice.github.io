@@ -1,13 +1,13 @@
 #Skills
 -   name: Programming
-    level:
+    color: "#ff1744"
     keywords:
         - C++
         - Java
         - Python
 
 -   name: Graphics
-    level:
+    color:
     keywords:
         - Unity
         - OpenGL
