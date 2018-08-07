@@ -1,0 +1,20 @@
+{% if page.intro.text %}
+<div class="feature__wrapper">
+    <div class="feature__item--center">
+      <div class="archive__item">
+        <div class="archive__item-body">
+          {% if page.intro.title_text %}
+            <h2 class="archive__item-title">{{ page.intro.title_text }}</h2>
+          {% endif %}
+            <div class="archive__item-excerpt">
+              {{ page.intro.text | markdownify }}
+            </div>
+
+          {% if page.intro.button_url %}
+            <p><a href="{{ page.intro.button_url }}" class="btn btn--primary">{{ page.intro.button_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+</div>
+{% endif %}

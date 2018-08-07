@@ -2,62 +2,7 @@
 layout: default
 ---
 
-<!-- Sanitize banner background image url -->
-{% if page.banner.background_image_url contains "://" %}
-  {% capture background_image_url %}{{ page.banner.background_image_url }}{% endcapture %}
-{% else %}
-  {% capture background_image_url %}{{ page.banner.background_image_url | absolute_url }}{% endcapture %}
-{% endif %}
-
-<!-- Sanitize id picture url -->
-{% if page.banner.id_picture_url contains "://" %}
-  {% capture id_picture_url %}{{ page.banner.id_picture_url }}{% endcapture %}
-{% else %}
-  {% capture id_picture_url %}{{ page.banner.id_picture_url | absolute_url }}{% endcapture %}
-{% endif %}
-
-<!-- Sanitize background image filter -->
-{% if page.banner.background_image_filter contains "rgba" %}
-  {% capture background_image_filter %}{{ page.banner.background_image_filter }}{% endcapture %}
-{% elsif page.banner.background_image_filter %}
-  {% capture background_image_filter %}rgba(0, 0, 0, {{ page.banner.background_image_filter }}){% endcapture %}
-{% endif %}
-
-<!-- Sanitize button url -->
-{% if page.banner.button_url contains "://" %}
-  {% capture button_url %}{{ page.banner.button_url }}{% endcapture %}
-{% else %}
-  {% capture button_url %}{{page.banner.button_url | absolute_url }}{% endcapture %}
-{% endif %}
-
-<div class="page__hero{% if page.banner.background_default_color or page.banner.background_image_url %}--overlay{% endif %}"
-  style="{% if page.banner.background_default_color %}background-color: {{ page.banner.background_default_color | default: 'transparent' }};{% endif %} {% if background_image_url %}background-image: {% if background_image_filter %}linear-gradient({{ background_image_filter }}, {{ background_image_filter }}), {% endif %}url('{{ background_image_url }}');{% endif %}"
->
-
-    <div class="wrapper">
-      {% if page.banner.id_picture_url %}
-      <div style="float: left; margin-right: 50px;">
-        <img src="{{ id_picture_url }}" style="max-width:250px; max-height:250px; width: auto; height: auto; border-radius: 50%;">
-      </div>
-      {% endif %}
-
-      <div style="float: left;">
-        <h1 class="page__title" itemprop="headline">
-            {{ page.banner.hook_text | markdownify | remove: "<p>" | remove: "</p>" }}
-        </h1>
-        {% if page.banner.welcome_text %}
-          <p class="page__lead">{{ page.banner.welcome_text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-        {% endif %}
-        {% if page.banner.button_url %}
-          <p><a href="{{ button_url }}" class="btn btn--light-outline btn--large">{{ page.banner.button_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
-        {% endif %}
-      </div>
-    </div>
-
-  {% if page.banner.background_image_caption %}
-    <span class="page__hero-caption">{{ page.banner.background_image_caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
-  {% endif %}
-</div>
+{% include resume/banner.html %}
 
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
@@ -67,30 +12,10 @@ layout: default
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date: "%B %d, %Y" }}">{% endif %}
 
     <section class="page__content" itemprop="text">
-      {% if page.intro.text %}
-      <div class="feature__wrapper">
-          <div class="feature__item--center">
-            <div class="archive__item">
-              <div class="archive__item-body">
-                {% if page.intro.title_text %}
-                  <h2 class="archive__item-title">{{ page.intro.title_text }}</h2>
-                {% endif %}
-                  <div class="archive__item-excerpt">
-                    {{ page.intro.text | markdownify }}
-                  </div>
-
-                {% if page.intro.button_url %}
-                  <p><a href="{{ page.intro.button_url }}" class="btn btn--primary">{{ page.intro.button_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-      </div>
-      {% endif %}
-
-      {% include experiences.html %}
-      {% include education.html %}
-      {% include skills.html %}
+      {% include resume/intro.html %}
+      {% include resume/experiences.html %}
+      {% include resume/education.html %}
+      {% include resume/skills.html %}
     </section>
   </article>
 </div>
