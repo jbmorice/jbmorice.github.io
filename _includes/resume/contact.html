@@ -1,7 +1,10 @@
 {% if page.contact %}
-<div class="feature__wrapper">
+<div class="contact-box">
     <center>
-      <h1>Contact</h1>
+      <h1>{{ page.contact.catchphrase | default: "Contact" }}</h1>
+      <p>
+        {{ page.contact.instruction | default: }}<a href="mailto:{{ page.contact.email | default: site.author.email }}">{{ page.contact.email | default: site.author.email }}</a>
+      </p>
     </center>
   </div>
 {% endif %}

@@ -1,0 +1,41 @@
+$contact-color: darken($lighter-gray, 5%);
+$contact-padding: 1em;
+$contact-fade-length: 1.5em;
+
+.contact-box {
+    text-align: center;
+    text-decoration: none;
+    background-color: $contact-color;
+    border: 1px white solid;
+    position : relative;
+    padding-top: $contact-padding + $contact-fade-length;
+    padding-bottom: $contact-padding + $contact-fade-length;
+}
+
+.contact-box:before {
+    content  : "";
+    position : absolute;
+    z-index  : 1;
+    top      : 0;
+    left     : 0;
+    pointer-events   : none;
+    background-image : linear-gradient(to top, 
+                        $contact-color, 
+                      rgba(255, 255, 255, 1) 90%);
+    width    : 100%;
+    height   : $contact-fade-length;
+  }
+
+.contact-box:after {
+    content  : "";
+    position : absolute;
+    z-index  : 1;
+    bottom   : 0;
+    left     : 0;
+    pointer-events   : none;
+    background-image : linear-gradient(to bottom, 
+                        $contact-color, 
+                      rgba(255, 255, 255, 1) 90%);
+    width    : 100%;
+    height   : $contact-fade-length;
+  }

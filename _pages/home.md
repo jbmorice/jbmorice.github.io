@@ -109,7 +109,9 @@ skills:
         - GLSL
         - Vulkan
 
-contact: test
+contact:
+  catchphrase: "Do not hesitate to contact me !"
+  instruction: "Send me an email at : "
 
 # TODO: Maybe add these ?
 # # Associations
