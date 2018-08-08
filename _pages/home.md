@@ -109,6 +109,8 @@ skills:
         - GLSL
         - Vulkan
 
+contact: test
+
 # TODO: Maybe add these ?
 # # Associations
 # -   organization:
