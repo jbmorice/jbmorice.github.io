@@ -278,7 +278,7 @@ header h1 {
 }
 
 .cd-timeline__date {
-	float: left;
+	//float: left;
 	padding: .8em 0;
 	opacity: .7;
 }
@@ -419,5 +419,33 @@ header h1 {
 	100% {
 		-webkit-transform: translateX(0);
 		transform: translateX(0);
+	}
+}
+
+// Customization for resume template
+.cd-timeline__company-logo {
+	display: block;
+
+	img {
+		max-width: 150px;
+		max-height: 90px;
+		width: auto;
+		height: auto;
+	}
+}
+
+// if width >= ...
+@media only screen and (min-width: 768px) {
+	.cd-timeline__company-logo {
+		float: right;
+		top: 0;
+		right: 0;
+		margin-left: 10px;
+	}
+}
+
+@media only screen and (min-width: 1170px) {
+	.cd-timeline__content h3 h4 {
+		display: block;
 	}
 }

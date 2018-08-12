@@ -8,9 +8,9 @@
       <h3 style="margin: 0.5em 0 0.5em;">{{ skill.name }}</h3>
       {% for keyword in skill.keywords %}
         {% if skill.color %}
-          <span class="badge" style="background-color: {{ skill.color }}; color: white;">{{ keyword }}</span>
+          <span class="resume-skill-badge" style="background-color: {{ skill.color }}; color: white;">{{ keyword }}</span>
         {% else %}
-          <span class="badge">{{ keyword }}</span>
+          <span class="resume-skill-badge">{{ keyword }}</span>
         {% endif %}
       {% endfor %}
     {% endfor %}

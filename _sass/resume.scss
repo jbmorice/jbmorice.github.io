@@ -1,0 +1,21 @@
+.layout--resume {
+	@import "vertical-timeline"; // Integrated vertical-timeline js plugin scss file to share theme variables
+
+	.resume-skill-badge {
+		display: inline-block;
+		margin-bottom: 0.25em;
+		padding: 0.5em 1em;
+		font-family: $sans-serif;
+		font-size: $type-size-6;
+		text-align: center;
+		text-decoration: none;
+		border-width: 0;
+		border-radius: $border-radius;
+		background-color: $lighter-gray;
+	}
+	
+	.resume-contact {
+		color: $dark-gray;
+		padding-bottom: 5em;
+	}
+}
