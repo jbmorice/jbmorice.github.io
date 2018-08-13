@@ -2,6 +2,7 @@
 <div class="resume-contact">
     <center>
       <h1>{{ page.contact.catchphrase | default: "Contact" }}</h1>
+      <i class="fas fa-envelope fa-7x"></i>
       <p>
         {{ page.contact.instruction | default: }}<a href="mailto:{{ page.contact.email | default: site.author.email }}">{{ page.contact.email | default: site.author.email }}</a>
       </p>

@@ -7,7 +7,7 @@
             <h2 class="archive__item-title">{{ page.intro.title_text }}</h2>
           {% endif %}
             <div class="archive__item-excerpt">
-              {{ page.intro.text | markdownify }}
+              <i>{{ page.intro.text | markdownify }}</i>
             </div>
 
           {% if page.intro.button_url %}

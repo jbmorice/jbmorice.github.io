@@ -1,7 +1,7 @@
 {% if page.experiences %}
   <div class="feature__wrapper">
     <center>
-      <h1 id="experiences">My experiences</h1>
+      <h1 id="experiences"><i class="fas fa-briefcase"></i> My experiences</h1>
     </center>
 
     <section class="cd-timeline js-cd-timeline">
@@ -59,7 +59,7 @@
                 </h4>
               {% endif %}
 
-              <p>{{ experience.short_summary | markdownify }}</p>
+              {{ experience.short_summary | markdownify }}
 
               {% if experience.detailed_summary %}
                 <!-- TODO: Magnific popup with content -->
