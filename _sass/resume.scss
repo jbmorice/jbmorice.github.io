@@ -1,6 +1,46 @@
 .layout--resume {
 	@import "vertical-timeline"; // Integrated vertical-timeline js plugin scss file to share theme variables
 
+	.feature__item{
+		&--left {
+			img {
+				margin-top: 1.5em;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 70%;
+				height: 70%;
+			}
+		}
+
+		&--right {
+			img {
+				margin-top: 1.5em;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 70%;
+				height: 70%;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		.feature__item{
+			&--left {
+				img {
+					float: right;
+				}
+			}
+
+			&--right {
+				img {
+					float: left;
+				}
+			}
+		}
+	}
+
 	.resume-skill-badge {
 		display: inline-block;
 		margin-bottom: 0.25em;
