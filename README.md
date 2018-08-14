@@ -3,8 +3,8 @@ My personal website
 
 ## To do
 - [x] Center company logo on small screens (need vertical tweaking)
-- [ ] Date for degrees
-- [ ] Add "Find me on..." in footer
+- [x] Date for degrees
+- [x] Add "Find me on..." in footer
 - [ ] Put timeline icons attributions in footer
 - [ ] Download CV in pdf button
 

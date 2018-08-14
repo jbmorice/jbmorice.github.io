@@ -91,6 +91,15 @@ degrees :
         engineering, database management, operating systems, network management
 
 #Skills
+# skill_categories :
+# -   name        :
+#     badge_color :
+#     text_color  :
+#     skills      :
+#     -   name  :
+#         icon  :
+#         image :
+
 skills :
 -   name     : Programming
     color    : "#ff1744"
@@ -123,8 +132,10 @@ skills :
         - English
 
 contact :
-  catchphrase : "Do not hesitate to contact me !"
-  instruction : "Send me an email at : "
+  catchphrase        : "Do not hesitate to contact me !"
+  mail_catchphrase   : "Send me an email at : "
+  social_enabled     : true
+  social_catchphrase :
 
 # TODO: Maybe add these ?
 # # Associations

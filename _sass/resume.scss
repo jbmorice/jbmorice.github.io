@@ -3,6 +3,18 @@
 
 	.feature__item{
 		&--left {
+			.date {
+				display: block;
+				margin-top: 0;
+				font-size: 1rem;
+				color: $text-color;
+				opacity: .7;
+			}
+
+			h2 {
+				margin-top: 0;
+			}
+			
 			img {
 				margin-top: 1.5em;
 				display: block;
@@ -14,6 +26,18 @@
 		}
 
 		&--right {
+			.date {
+				display: block;
+				margin-top: 0;
+				font-size: 1rem;
+				color: $text-color;
+				opacity: .7;
+			}
+
+			h2 {
+				margin-top: 0;
+			}
+			
 			img {
 				margin-top: 1.5em;
 				display: block;
@@ -28,12 +52,30 @@
 	@media only screen and (min-width: 768px) {
 		.feature__item{
 			&--left {
+				.date {
+					float: right;
+					margin-top: 1.7em;
+				}
+
+				h2 {
+					margin-top: 1em;
+				}
+
 				img {
 					float: right;
 				}
 			}
 
 			&--right {
+				.date {
+					float: left;
+					margin-top: 1.7em;
+				}
+
+				h2 {
+					margin-top: 1em;
+				}
+
 				img {
 					float: left;
 				}
@@ -57,5 +99,11 @@
 	.resume-contact {
 		color: $dark-gray;
 		padding-bottom: 1em;
+	}
+
+	hr.resume-contact-line{ 
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba($text-color, 0.7), rgba(0, 0, 0, 0));
 	}
 }
