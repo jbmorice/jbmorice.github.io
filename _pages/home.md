@@ -91,45 +91,49 @@ degrees :
         engineering, database management, operating systems, network management
 
 #Skills
-# skill_categories :
-# -   name        :
-#     badge_color :
-#     text_color  :
-#     skills      :
-#     -   name  :
-#         icon  :
-#         image :
+skill_categories :
+-   name             : Programming
+    background_color : "#ff1744"
+    text_color       :
+    skills           :
+    -   name  : C
+        icon  : devicon-c-plain
+    -   name  : C++
+        icon  : devicon-cplusplus-plain
+    -   name  : C#
+        icon  : devicon-csharp-plain
+    -   name  : Java
+        icon  : devicon-java-plain
+    -   name  : Python
+        icon  : devicon-python-plain
+        image :
 
-skills :
--   name     : Programming
-    color    : "#ff1744"
-    keywords :
-        - C
-        - C++
-        - Python
-        - Java
+-   name             : Graphics Programming
+    background_color : 
+    text_color       :
+    skills           :
+    -   name  : Unity
+        icon  : devicons devicons-unity_small
+    -   name  : OpenGL & GLSL
+        image : /assets/images/opengl_logo.png
+    -   name  : Vulkan
+        image : /assets/images/vulkan_logo.png
 
--   name     : Graphics
-    color    :
-    keywords :
-        - Unity
-        - OpenGL
-        - GLSL
-        - Vulkan
+-   name             : Personal
+    background_color : 
+    text_color       :
+    skills           :
+    -   name  : Teamwork
+    -   name  : Communication
+    -   name  : Project Management
+    -   name  : Agile Software Development
 
--   name     : Personal
-    color    :
-    keywords :
-        - Teamwork
-        - Communication
-        - Project Management
-        - Agile Software Development
-
--   name     : Languages
-    color    :
-    keywords :
-        - French
-        - English
+-   name             : Languages
+    background_color : 
+    text_color       :
+    skills           :
+    -   name  : ":fr: French"
+    -   name  : ":gb: English"
 
 contact :
   catchphrase        : "Do not hesitate to contact me !"

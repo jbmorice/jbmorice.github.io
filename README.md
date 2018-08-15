@@ -13,6 +13,6 @@ My personal website
 - [ ] Pagination warning at compile
 
 ## To consider
-- [ ] Icons in skills
+- [x] Icons in skills
 - [ ] Skills slide in animation
 - [ ] Add multi-language

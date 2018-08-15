@@ -1,17 +1,25 @@
-{% if page.skills %}
+{% if page.skill_categories %}
   <div class="feature__wrapper" style="margin-bottom: 0; border-bottom: 0;">
     <center>
       <h1><i class="fas fa-wrench"></i> My skills</h1>
     </center>
 
-    {% for skill in page.skills %}
-      <h3 style="margin: 0.5em 0 0.5em;">{{ skill.name }}</h3>
-      {% for keyword in skill.keywords %}
-        {% if skill.color %}
-          <span class="resume-skill-badge" style="background-color: {{ skill.color }}; color: white;">{{ keyword }}</span>
-        {% else %}
-          <span class="resume-skill-badge">{{ keyword }}</span>
-        {% endif %}
+    {% for skill_category in page.skill_categories %}
+      <h3 style="margin: 0.5em 0 0.5em;">{{ skill_category.name }}</h3>
+      {% for skill in skill_category.skills %}
+        <span class="resume-skill-badge" {% if skill_category.background_color %}style="background-color: {{ skill_category.background_color }}; color: {{ skill_category.text_color | default: "white"}};"{% endif %}>
+          {% if skill.icon %}
+            <i class="{{ skill.icon }}"></i> 
+          {% elsif skill.image %}
+            {% if skill.image contains "://" %}
+              {% capture skill_img %}{{ skill.image }}{% endcapture %}
+            {% else %}
+              {% capture skill_img %}{{ skill.image | absolute_url }}{% endcapture %}
+            {% endif %}
+            <img src="{{ skill_img }}" style="filter: grayscale(100%){% if skill_category.background_color %} invert(100%) brightness(200%){% endif %};"/>
+          {% endif %}
+          {{ skill.name }}
+        </span>
       {% endfor %}
     {% endfor %}
   </div>
