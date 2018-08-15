@@ -3,11 +3,13 @@
     <center>
       <h1><i class="fas fa-wrench"></i> My skills</h1>
     </center>
-
+    
+    <section class="js-skill-section">
     {% for skill_category in page.skill_categories %}
       <h3 style="margin: 0.5em 0 0.5em;">{{ skill_category.name }}</h3>
+      <div class="js-skill-block">
       {% for skill in skill_category.skills %}
-        <span class="resume-skill-badge" {% if skill_category.background_color %}style="background-color: {{ skill_category.background_color }}; color: {{ skill_category.text_color | default: "white"}};"{% endif %}>
+        <span class="resume-skill-badge js-skill" {% if skill_category.background_color %}style="background-color: {{ skill_category.background_color }}; color: {{ skill_category.text_color | default: "white"}};"{% endif %}>
           {% if skill.icon %}
             <i class="{{ skill.icon }}"></i> 
           {% elsif skill.image %}
@@ -21,6 +23,9 @@
           {{ skill.name }}
         </span>
       {% endfor %}
+      </div>
     {% endfor %}
+    </section>
+    <script src="/assets/js/skills.js"></script>
   </div>
 {% endif %}
