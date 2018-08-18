@@ -34,7 +34,6 @@ experiences :
     short_summary       : "Evaluation of Vulkan as a replacement for OpenGL inside a 3D engine. Converted a subset of the engine and assessed the performance gain."
     detailed_summary    :
     timeline_icon_url   : /assets/images/timeline_icon_fighter_jet.png
-    # TODO: <div>Icon made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 -   company_name        : FIT-SA
     company_location    : Rennes, France
@@ -46,7 +45,6 @@ experiences :
     short_summary       : "Initiated and planned a company wide improvement project for the company’s information system. Performed needs assessments and expressed functional specifications for the improvement of the actual enterprise resource planning software and for a future customer relationship management software."
     detailed_summary    :
     timeline_icon_url   : /assets/images/timeline_icon_milk_bottle.png
-    #  TODO: <div>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 -   company_name        : MPO France
     company_location    : Vilaines-La-Juhel, France
@@ -58,7 +56,6 @@ experiences :
     short_summary       : "Functional analysis, design and development of a software interface between a desktop publishing workflow engine and a manufacturing execution system."
     detailed_summary    :
     timeline_icon_url   : /assets/images/timeline_icon_vinyl_record.png
-    # TODO: <div>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 # Degrees
 degrees :
@@ -140,6 +137,11 @@ contact :
   mail_catchphrase   : "Send me an email at : "
   social_enabled     : true
   social_catchphrase :
+
+attributions :
+-   "Plane timeline icon made by [Dave Gandy](https://www.flaticon.com/authors/dave-gandy) from [Flaticon](www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
+-   "Milk bottle timeline icon made by [Freepik](http://www.freepik.com) from [Flaticon](www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
+-   "Vynil record timeline icon made by [Freepik](http://www.freepik.com) from [Flaticon](www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
 
 # TODO: Maybe add these ?
 # # Associations

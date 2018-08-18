@@ -1,0 +1,10 @@
+{% if page.attributions %}
+    <div class="attributions">
+    <h6 >Attributions</h6>
+    <ul>
+        {% for attribution in page.attributions %}
+            <li>{{ attribution | markdownify }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endif %}
