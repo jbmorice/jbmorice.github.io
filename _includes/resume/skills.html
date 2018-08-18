@@ -4,7 +4,6 @@
       <h1><i class="fas fa-wrench"></i> My skills</h1>
     </center>
     
-    <section class="js-skill-section">
     {% for skill_category in page.skill_categories %}
       <h3 style="margin: 0.5em 0 0.5em;">{{ skill_category.name }}</h3>
       <div class="js-skill-block">
@@ -25,7 +24,7 @@
       {% endfor %}
       </div>
     {% endfor %}
-    </section>
+
     <script src="/assets/js/skills.js"></script>
   </div>
 {% endif %}
