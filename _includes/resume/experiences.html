@@ -1,0 +1,77 @@
+{% if page.experiences %}
+  <div class="feature__wrapper">
+
+    <h1 id="experiences" style="text-align: center;"><i class="fas fa-briefcase"></i> My experiences</h1>
+
+    <section class="cd-timeline js-cd-timeline">
+      <div class="cd-timeline__container">
+        {% for experience in page.experiences %}
+
+          <!-- Sanitize timeline icon image url -->
+          {% if experience.timeline_icon_url contains "://" %}
+            {% capture timeline_icon_img %}{{ experience.timeline_icon_url }}{% endcapture %}
+          {% else %}
+            {% capture timeline_icon_img %}{{ experience.timeline_icon_url | absolute_url }}{% endcapture %}
+          {% endif %}
+
+          <!-- Sanitize company logo image url -->
+          {% if experience.company_logo_url contains "://" %}
+            {% capture company_logo_img %}{{ experience.company_logo_url }}{% endcapture %}
+          {% else %}
+            {% capture company_logo_img %}{{ experience.company_logo_url | absolute_url }}{% endcapture %}
+          {% endif %}
+
+          <div class="cd-timeline__block js-cd-block">
+
+            <div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+              {% if timeline_icon_img %}<img src="{{ timeline_icon_img }}" />{% endif %}
+            </div>
+
+            <div class="cd-timeline__content js-cd-content">
+
+              <span class="cd-timeline__date">{{ experience.start_date }} - {{ experience.end_date }}</span>
+
+              <div class="cd-timeline__company-logo">
+                {% if company_logo_img %}
+                  <img src="{{ company_logo_img }}"/>
+                  <br/>
+                {% endif %}
+              </div>
+
+              <h3 style="margin-top: 0;">
+                {{ experience.position }}
+              </h3>
+
+              <h4>
+                {% if experience.company_website_url %}
+                  <a href="{{ experience.company_website_url}}" style="color: inherit; text-decoration: inherit;">{{ experience.company_name }}</a>
+                {% else %}
+                  {{ experience.company_name }}
+                {% endif %}
+              </h4>
+
+              {% if experience.company_location %}
+              <!--margin-top: 0; text-align: right;-->
+                <h4 style="font-size: medium;">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  {{ experience.company_location }}
+                </h4>
+              {% endif %}
+
+              {{ experience.short_summary | markdownify }}
+
+              {% if experience.detailed_summary %}
+                <!-- TODO: Magnific popup with content -->
+                <a href="#0" class="btn btn--primary">Read more</a>
+              {% endif %}
+
+            </div> <!-- cd-timeline-content -->
+          </div> <!-- cd-timeline-block -->
+        {% endfor %}
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/assets/js/vertical-timeline.js"></script> <!-- Resource jQuery -->
+  </div>
+{% endif %}

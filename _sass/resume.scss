@@ -1,0 +1,283 @@
+// ===============
+// Collapsible (should be usable anywhere with collapsible.js include in html)
+// Source : https://www.w3schools.com/howto/howto_js_collapsible.asp
+//
+// #TODO: Move to another scss file
+.collapsible {
+	cursor: pointer;
+	color: inherit;
+	border: none;
+	text-align: left;
+	outline: none;
+}
+
+.collapsible:after {
+	content: "\002B";
+	color: inherit;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.active:after {
+	content: "\2212";
+}
+
+.content {
+	background-color: inherit;
+	color: inherit;
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+// ===============
+
+.layout--resume {
+	// ===============
+	// Experiences
+	@import "vertical-timeline"; // Integrated vertical-timeline js plugin scss file to share theme variables
+	// ===============
+
+	// ===============
+	// Education
+	.feature__item {
+		&--left {
+			.date {
+				display: block;
+				margin-top: 0;
+				font-size: 1rem;
+				color: $text-color;
+				opacity: .7;
+			}
+
+			h2 {
+				margin-top: 0;
+			}
+
+			img {
+				margin-top: 1.5em;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 70%;
+				height: 70%;
+			}
+		}
+
+		&--right {
+			.date {
+				display: block;
+				margin-top: 0;
+				font-size: 1rem;
+				color: $text-color;
+				opacity: .7;
+			}
+
+			h2 {
+				margin-top: 0;
+			}
+
+			img {
+				margin-top: 1.5em;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 70%;
+				height: 70%;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		.feature__item {
+			&--left {
+				.date {
+					float: right;
+					margin-top: 1.7em;
+				}
+
+				h2 {
+					margin-top: 1em;
+				}
+
+				img {
+					float: right;
+				}
+			}
+
+			&--right {
+				.date {
+					float: left;
+					margin-top: 1.7em;
+				}
+
+				h2 {
+					margin-top: 1em;
+				}
+
+				img {
+					float: left;
+				}
+			}
+		}
+	}
+	// ===============
+
+	// ===============
+	// Skills
+	.resume-skill-badge {
+		display: inline-block;
+		margin-bottom: 0.25em;
+		padding: 0.5em 1em;
+		font-family: $sans-serif;
+		font-size: $type-size-6;
+		text-align: center;
+		text-decoration: none;
+		border-width: 0;
+		border-radius: $border-radius;
+		background-color: $lighter-gray;
+	}
+
+	@media only screen and (min-width: 1170px) {
+		.resume-skill-badge {
+			&--slide-in {
+				// margin-left: 20px;
+				animation: slide-in 1s;
+				animation-fill-mode: forwards;
+			}
+		}
+
+		@for $i from 1 through 50 {
+			.resume-skill-badge {
+				&--slide-in {
+					visibility: hidden;
+					&:nth-child(#{$i}) {
+						animation-delay: ($i - 1) * 0.3s;
+					}
+				}
+			}
+		}
+	}
+
+	
+	@keyframes slide-in {
+		0% {
+			visibility: visible;
+			opacity: 0;
+			-webkit-transform: translateX(1000px);
+			transform: translateX(1000px);
+		}
+
+		30% {
+			opacity: 1;
+		}
+
+		60% {
+			-webkit-transform: translateX(-20px);
+			transform: translateX(-20px);
+		}
+
+		100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+			visibility: visible;
+		}
+	}
+	// ===============
+
+	// ===============
+	// Footer like bottom
+	#bottom {
+		@include clearfix;
+		background-color: $footer-background-color;
+		-webkit-animation: $intro-transition;
+		animation: $intro-transition;
+		-webkit-animation-delay: 0.45s;
+		animation-delay: 0.45s;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.fas,
+		.fab,
+		.far,
+		.fal {
+			color: $muted-text-color;
+		}
+	}
+
+	.page__footer {
+		// Hack to make it stick to footer
+		margin-top: 0;
+	}
+	// ===============
+
+	// ===============
+	// Contact
+	.resume-contact {
+		text-align: center;
+		margin-top: 3em;
+		padding-top: 1em;
+		color: $dark-gray;
+		padding-bottom: 1em;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 1em;
+		padding-right: 1em;
+
+		@include breakpoint($x-large) {
+			max-width: $x-large;
+		}
+
+		hr {
+			border: 0;
+			height: 1px;
+			background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba($text-color, 0.7), rgba(0, 0, 0, 0));
+		}
+	}
+	// ===============
+
+	// ===============
+	// Attribution and credits
+	.attributions {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 1em;
+		padding-right: 1em;
+
+		@include breakpoint($x-large) {
+			max-width: $x-large;
+		}
+
+		h6 {
+			margin-top: 0;
+		}
+
+		ul li {
+			font-size: small;
+			margin-bottom: 0;
+		}
+
+		.collapsible {
+			color: $muted-text-color;
+			font-size: .75em;
+			font-weight: bold;
+		}
+
+		.collapsible:after {
+			color: $muted-text-color;
+		}
+
+		.content {
+			color: $muted-text-color;
+		}
+	}
+	// ===============
+}

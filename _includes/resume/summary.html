@@ -1,0 +1,16 @@
+{% if page.summary.text %}
+<div class="feature__wrapper">
+    <div class="feature__item--center">
+      <div class="archive__item">
+        <div class="archive__item-body">
+          {% if page.summary.title_text %}
+            <h2 class="archive__item-title">{{ page.intro.title_text }}</h2>
+          {% endif %}
+            <div class="archive__item-excerpt">
+              {{ page.summary.text | markdownify }}
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endif %}
