@@ -139,7 +139,7 @@
 		background-color: $lighter-gray;
 	}
 
-	@media only screen and (min-width: 768px) {
+	@media only screen and (min-width: 1170px) {
 		.resume-skill-badge {
 			&--slide-in {
 				// margin-left: 20px;
@@ -222,6 +222,7 @@
 	// ===============
 	// Contact
 	.resume-contact {
+		text-align: center;
 		margin-top: 3em;
 		padding-top: 1em;
 		color: $dark-gray;

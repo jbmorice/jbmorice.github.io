@@ -19,9 +19,9 @@ locale                   : "en-US"
 title                    : "Jean-Baptiste Morice"
 title_separator          : "-"
 name                     : "Jean-Baptiste Morice"
-description              : "My personal website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+description              : "Jean-Baptiste Morice's personal website."
+url                      : https://jbmorice.com
+baseurl                  : /
 repository               : "jbmorice/jbmorice.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
@@ -29,7 +29,7 @@ words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : jbmorice-com
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -68,7 +68,7 @@ algolia:
   powered_by             : # true (default), false
 
 # SEO Related
-google_site_verification :
+google_site_verification : 
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
@@ -102,7 +102,7 @@ author:
   bio              : "I am an amazing person."
   location         : "Rennes, France"
   email            : "mail@jbmorice.com"
-  uri              :
+  uri              : "https://jbmorice.com"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
@@ -263,6 +263,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true

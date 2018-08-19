@@ -1,20 +1,18 @@
 {% if page.contact %}
   <div class="resume-contact">
-    <center>
-      <h1>{{ page.contact.catchphrase | default: "Contact" }}</h1>
-      <i class="fas fa-envelope fa-7x"></i>
+    <h1>{{ page.contact.catchphrase | default: "Contact" }}</h1>
+    <i class="fas fa-envelope fa-7x"></i>
+    <p>
+      {{ page.contact.mail_catchphrase | default: }}<a href="mailto:{{ page.contact.email | default: site.author.email }}">{{ page.contact.email | default: site.author.email }}</a>
+    </p>
+    {% if page.contact.social_enabled == true %}
+    <hr class="resume-contact-line"></hr>
       <p>
-        {{ page.contact.mail_catchphrase | default: }}<a href="mailto:{{ page.contact.email | default: site.author.email }}">{{ page.contact.email | default: site.author.email }}</a>
+          {{ page.contact.social_catchphrase | default: "Find me on :"}} 
+                    {% if site.author.twitter %}<a href="https://twitter.com/{{ site.author.twitter }}" itemprop="sameAs"><i class="fab fa-twitter"></i></a>{% endif %}
+                    {% if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" itemprop="sameAs"><i class="fab fa-linkedin"></i></a>{% endif %}
+                    {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}" itemprop="sameAs"><i class="fab fa-github"></i></a>{% endif %}
       </p>
-      {% if page.contact.social_enabled == true %}
-      <hr class="resume-contact-line"></hr>
-        <p>
-            {{ page.contact.social_catchphrase | default: "Find me on :"}} 
-                      {% if site.author.twitter %}<a href="https://twitter.com/{{ site.author.twitter }}" itemprop="sameAs"><i class="fab fa-twitter"></i></a>{% endif %}
-                      {% if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs"><i class="fab fa-linkedin"></i></a>{% endif %}
-                      {% if site.author.github %}<a href="https://github.com/{{ author.github }}" itemprop="sameAs"><i class="fab fa-github"></i></a>{% endif %}
-        </p>
-      {% endif %}
-    </center>
+    {% endif %}
   </div>
 {% endif %}

@@ -33,7 +33,7 @@ experiences :
     start_date          : March
     end_date            : September 2018
     short_summary       : |
-        Studied the interactions in virtual reality between synthetic 3D content (produced by a graphic designer) and 3D content captured from reality (photogrammetry, 360° photos & videos, etc.). Development of demonstrators highlighting the technological barriers.
+        Studied interactions in virtual reality between synthetic 3D content (produced by a graphic designer) and content captured from reality (photogrammetry, 360° photos & videos, etc.). Development of demonstrators highlighting the technological barriers.
     detailed_summary    :
     timeline_icon_url   : /assets/images/virtual-reality.png
 
