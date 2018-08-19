@@ -10,19 +10,33 @@ banner:
   background_image_filter   : "0.3"
   id_picture_url            : /assets/images/id_picture.jpg
   hook_text                 : "Hi, I'm **Jean-Baptiste Morice** !"
-  welcome_text              : "Welcome to my personal website."
+  welcome_text              : |
+    Welcome to my personal website.
   button_label              : "Learn more about me"
   button_url                : "#experiences"
 
-# Intro block configuration
-intro :
+# Summary block configuration
+summary :
 #  title_text: "Intro"
-  text : "I am an engineering student at ESIR (École Supérieure d’Ingénieurs de Rennes). In 2018 I will hold an engineering degree in computer science specialized in computer graphics and digital image processing. I relish challenges and I am equally comfortable working in a team or on my own."
-#  button_label: "Download my CV"
-#  button_url: "#"
+  text : |
+    I am an engineering student at ESIR (École Supérieure d’Ingénieurs de Rennes). In 2018 I will hold an engineering degree in computer science specialized in computer graphics and digital image processing. I relish challenges and I am equally comfortable working in a team or on my own.
+
+    [Download my resume](/assets/files/jean-baptiste_morice_resume.pdf){: .btn .btn--primary .btn--large}
 
 # Work experiences
 experiences :
+-   company_name        : B<>COM
+    company_location    : Cesson-Sévigné, France
+    company_website_url : https://b-com.com/en
+    company_logo_url    : /assets/images/company_logo_bcom.png
+    position            : Virtual Reality R&D Engineer Intern
+    start_date          : March
+    end_date            : September 2018
+    short_summary       : |
+        Studied the interactions in virtual reality between synthetic 3D content (produced by a graphic designer) and 3D content captured from reality (photogrammetry, 360° photos & videos, etc.). Development of demonstrators highlighting the technological barriers.
+    detailed_summary    :
+    timeline_icon_url   : /assets/images/virtual-reality.png
+
 -   company_name        : SOGITEC
     company_location    : Bruz, France
     company_website_url : http://www.sogitec.com
@@ -30,7 +44,8 @@ experiences :
     position            : 3D Engine R&D Engineer Intern
     start_date          : June
     end_date            : September 2017
-    short_summary       : "Evaluation of Vulkan as a replacement for OpenGL inside a 3D engine. Converted a subset of the engine and assessed the performance gain."
+    short_summary       : |
+        Evaluation of Vulkan as a replacement for OpenGL inside a 3D engine. Converted a subset of the engine and assessed the performance gain.
     detailed_summary    :
     timeline_icon_url   : /assets/images/timeline_icon_fighter_jet.png
 
@@ -41,7 +56,8 @@ experiences :
     position            : IT Project Manager Intern
     start_date          : June
     end_date            : August 2016
-    short_summary       : "Initiated and planned a company wide improvement project for the company’s information system. Performed needs assessments and expressed functional specifications for the improvement of the actual enterprise resource planning software and for a future customer relationship management software."
+    short_summary       : |
+        Initiated and planned a company wide improvement project for the company’s information system. Performed needs assessments and expressed functional specifications for the improvement of the actual enterprise resource planning software and for a future customer relationship management software.
     detailed_summary    :
     timeline_icon_url   : /assets/images/timeline_icon_milk_bottle.png
 
@@ -52,7 +68,8 @@ experiences :
     position            : Software Developer Intern
     start_date          : April
     end_date            : August 2015
-    short_summary       : "Functional analysis, design and development of a software interface between a desktop publishing workflow engine and a manufacturing execution system."
+    short_summary       : |
+        Functional analysis, design and development of a software interface between a desktop publishing workflow engine and a manufacturing execution system.
     detailed_summary    :
     timeline_icon_url   : /assets/images/timeline_icon_vinyl_record.png
 
@@ -135,10 +152,11 @@ contact :
   catchphrase        : "Do not hesitate to contact me !"
   mail_catchphrase   : "Send me an email at : "
   social_enabled     : true
-  social_catchphrase :
+  #social_catchphrase :
 
 attributions :
 -   "Banner image from [Crytek Sponza scene rendered in Babylon.js](https://www.babylonjs.com/demos/sponza/)"
+-   "VR HMD timeline icon made by [Freepik](http://www.freepik.com) from [Flaticon](www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
 -   "Plane timeline icon made by [Dave Gandy](https://www.flaticon.com/authors/dave-gandy) from [Flaticon](www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
 -   "Milk bottle timeline icon made by [Freepik](http://www.freepik.com) from [Flaticon](www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
 -   "Vynil record timeline icon made by [Freepik](http://www.freepik.com) from [Flaticon](www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
@@ -157,5 +175,4 @@ attributions :
 #     startDate:
 #     endDate:
 #     description: 
-
 ---

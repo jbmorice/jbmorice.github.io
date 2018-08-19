@@ -35,7 +35,7 @@
           {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date: "%B %d, %Y" }}">{% endif %}
       
           <section class="page__content" itemprop="text">
-            {% include resume/intro.html %}
+            {% include resume/summary.html %}
             {% include resume/experiences.html %}
             {% include resume/education.html %}
             {% include resume/skills.html %}
