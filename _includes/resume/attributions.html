@@ -1,10 +1,13 @@
 {% if page.attributions %}
     <div class="attributions">
-    <h6 >Attributions</h6>
-    <ul>
-        {% for attribution in page.attributions %}
-            <li>{{ attribution | markdownify }}</li>
-        {% endfor %}
-    </ul>
+        <button class="collapsible">Attributions & Credits</button>
+        <div class="content">
+            <ul>
+                {% for attribution in page.attributions %}
+                    <li>{{ attribution | markdownify }}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
+    <script src="/assets/js/collapsible.js"></script>
 {% endif %}

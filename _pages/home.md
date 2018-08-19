@@ -7,7 +7,6 @@ permalink : /
 banner:
   background_default_color  : "#000"
   background_image_url      : "/assets/images/sponza.png"
-  background_image_caption  : "Crytek Sponza scene rendered in Babylon.js"
   background_image_filter   : "0.3"
   id_picture_url            : /assets/images/id_picture.jpg
   hook_text                 : "Hi, I'm **Jean-Baptiste Morice** !"
@@ -139,6 +138,7 @@ contact :
   social_catchphrase :
 
 attributions :
+-   "Banner image from [Crytek Sponza scene rendered in Babylon.js](https://www.babylonjs.com/demos/sponza/)"
 -   "Plane timeline icon made by [Dave Gandy](https://www.flaticon.com/authors/dave-gandy) from [Flaticon](www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
 -   "Milk bottle timeline icon made by [Freepik](http://www.freepik.com) from [Flaticon](www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
 -   "Vynil record timeline icon made by [Freepik](http://www.freepik.com) from [Flaticon](www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
