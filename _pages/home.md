@@ -106,7 +106,7 @@ degrees :
 #Skills
 skill_categories :
 -   name             : Programming
-    background_color : "#ff1744"
+    background_color : "#4B4B4C"
     text_color       :
     skills           :
     -   name  : C
@@ -122,7 +122,7 @@ skill_categories :
         image :
 
 -   name             : Graphics Programming
-    background_color : 
+    background_color : "#676767"
     text_color       :
     skills           :
     -   name  : Unity
@@ -133,7 +133,7 @@ skill_categories :
         image : /assets/images/vulkan_logo.png
 
 -   name             : Personal
-    background_color : 
+    background_color : "#808080"
     text_color       :
     skills           :
     -   name  : Teamwork
@@ -142,7 +142,7 @@ skill_categories :
     -   name  : Agile Software Development
 
 -   name             : Languages
-    background_color : 
+    background_color : "#989898"
     text_color       :
     skills           :
     -   name  : ":fr: French"
