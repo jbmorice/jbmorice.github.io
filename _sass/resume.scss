@@ -37,6 +37,11 @@
 	// ===============
 	// Experiences
 	@import "vertical-timeline"; // Integrated vertical-timeline js plugin scss file to share theme variables
+
+	// Disable image link effect
+	.page__content a:not(.btn):not(#goog-wm-sb):hover img {
+		box-shadow: none;
+	}
 	// ===============
 
 	// ===============

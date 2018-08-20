@@ -19,19 +19,36 @@
         <div class="archive__item">
           {% if degree.school_logo_url %}
             <div class="archive__item-teaser">
-              <img src=
+              {% if degree.school_website_url %}
+                <a href="{{ degree.school_website_url }}">
+                  <img src=
+                  {% if degree.logo contains "://" %}
+                    "{{ school_logo_img }}"
+                  {% else %}
+                    "{{ school_logo_img | absolute_url }}"
+                  {% endif %} />
+                </a>
+              {% else %}
+                <img src=
                 {% if degree.logo contains "://" %}
                   "{{ school_logo_img }}"
                 {% else %}
                   "{{ school_logo_img | absolute_url }}"
-                {% endif %}>
+                {% endif %} />
+              {% endif %}
             </div>
           {% endif %}
 
           <div class="archive__item-body">
               <span class="date">{{ degree.start_date}} - {{ degree.end_date}}</span>
               <h2 class="archive__item-title">{{ degree.degree }}</h2>
-              <h3 style="margin-top: 0;">{{ degree.school_name }}</h3>
+              {% if degree.school_website_url %}
+                <a href="{{ degree.school_website_url }}" style="color: inherit; text-decoration: inherit;">
+                  <h3 style="margin-top: 0;">{{ degree.school_name }}</h3>
+                </a>
+              {% else %}
+                <h3 style="margin-top: 0;">{{ degree.school_name }}</h3>
+              {% endif %}
               <h4 style="margin-top: 0; font-size: medium;">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 {{ degree.school_location }}

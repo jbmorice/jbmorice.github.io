@@ -33,7 +33,11 @@
 
               <div class="cd-timeline__company-logo">
                 {% if company_logo_img %}
-                  <img src="{{ company_logo_img }}"/>
+                  {% if experience.company_website_url %}
+                    <a href="{{ experience.company_website_url}}"><img src="{{ company_logo_img }}" /></a>
+                  {% else %}
+                    <img src="{{ company_logo_img }}"/>
+                  {% endif %}
                   <br/>
                 {% endif %}
               </div>
