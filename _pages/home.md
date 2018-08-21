@@ -6,9 +6,9 @@ permalink : /
 # Top banner configuration
 banner:
   background_default_color  : "#000"
-  background_image_url      : "/assets/images/sponza.png"
+  background_image_url      : "/assets/images/resume/sponza.png"
   background_image_filter   : "0.3"
-  id_picture_url            : /assets/images/id_picture.jpg
+  id_picture_url            : /assets/images/resume/id_picture.jpg
   hook_text                 : "Hi, I'm **Jean-Baptiste Morice** !"
   welcome_text              : |
     Welcome to my personal website.
@@ -28,57 +28,57 @@ experiences :
 -   company_name        : B<>COM
     company_location    : Cesson-Sévigné, France
     company_website_url : https://b-com.com/en
-    company_logo_url    : /assets/images/company_logo_bcom.png
+    company_logo_url    : /assets/images/resume/company_logo_bcom.png
     position            : Virtual Reality R&D Engineer Intern
     start_date          : March
     end_date            : September 2018
     short_summary       : |
         Studied interactions in virtual reality between synthetic 3D content (produced by a graphic designer) and content captured from reality (photogrammetry, 360° photos & videos, etc.). Development of demonstrators highlighting the technological barriers.
     detailed_summary    :
-    timeline_icon_url   : /assets/images/virtual-reality.png
+    timeline_icon_url   : /assets/images/resume/virtual-reality.png
 
 -   company_name        : SOGITEC
     company_location    : Bruz, France
     company_website_url : http://www.sogitec.com
-    company_logo_url    : /assets/images/company_logo_sogitec.png
+    company_logo_url    : /assets/images/resume/company_logo_sogitec.png
     position            : 3D Engine R&D Engineer Intern
     start_date          : June
     end_date            : September 2017
     short_summary       : |
         Evaluation of Vulkan as a replacement for OpenGL inside a 3D engine. Converted a subset of the engine and assessed the performance gain.
     detailed_summary    :
-    timeline_icon_url   : /assets/images/timeline_icon_fighter_jet.png
+    timeline_icon_url   : /assets/images/resume/timeline_icon_fighter_jet.png
 
 -   company_name        : FIT-SA
     company_location    : Rennes, France
     company_website_url : http://www.fitsa-group.com
-    company_logo_url    : "/assets/images/company_logo_fit.png"
+    company_logo_url    : "/assets/images/resume/company_logo_fit.png"
     position            : IT Project Manager Intern
     start_date          : June
     end_date            : August 2016
     short_summary       : |
         Initiated and planned a company wide improvement project for the company’s information system. Performed needs assessments and expressed functional specifications for the improvement of the actual enterprise resource planning software and for a future customer relationship management software.
     detailed_summary    :
-    timeline_icon_url   : /assets/images/timeline_icon_milk_bottle.png
+    timeline_icon_url   : /assets/images/resume/timeline_icon_milk_bottle.png
 
 -   company_name        : MPO France
     company_location    : Vilaines-La-Juhel, France
     company_website_url : https://www.mpo-international.com
-    company_logo_url    : /assets/images/company_logo_mpo.png
+    company_logo_url    : /assets/images/resume/company_logo_mpo.png
     position            : Software Developer Intern
     start_date          : April
     end_date            : August 2015
     short_summary       : |
         Functional analysis, design and development of a software interface between a desktop publishing workflow engine and a manufacturing execution system.
     detailed_summary    :
-    timeline_icon_url   : /assets/images/timeline_icon_vinyl_record.png
+    timeline_icon_url   : /assets/images/resume/timeline_icon_vinyl_record.png
 
 # Degrees
 degrees :
 -   degree             : Engineering Degree
     school_name        : École Supérieure d'Ingénieurs de Rennes (ESIR)
     school_website_url : https://esir.univ-rennes1.fr
-    school_logo_url    : /assets/images/school_logo_esir.png
+    school_logo_url    : /assets/images/resume/school_logo_esir.png
     school_location    : Rennes, France
     start_date         : 2015
     end_date           : 2018
@@ -92,7 +92,7 @@ degrees :
 -   degree             : Two year technical degree
     school_name        : Institut Universitaire de Technologie de Laval
     school_website_url : http://www.iut-laval.univ-lemans.fr
-    school_logo_url    : /assets/images/school_logo_iut_laval.png
+    school_logo_url    : /assets/images/resume/school_logo_iut_laval.png
     school_location    : Laval, France
     start_date         : 2013
     end_date           : 2015
@@ -128,9 +128,9 @@ skill_categories :
     -   name  : Unity
         icon  : devicons devicons-unity_small
     -   name  : OpenGL & GLSL
-        image : /assets/images/opengl_logo.png
+        image : /assets/images/resume/opengl_logo.png
     -   name  : Vulkan
-        image : /assets/images/vulkan_logo.png
+        image : /assets/images/resume/vulkan_logo.png
 
 -   name             : Personal
     background_color : "#808080"
