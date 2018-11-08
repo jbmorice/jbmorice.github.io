@@ -1,0 +1,3 @@
+[submodule "themes/hugo-simplex"]
+	path = themes/hugo-simplex
+	url = https://github.com/jbmorice/hugo-simplex.git

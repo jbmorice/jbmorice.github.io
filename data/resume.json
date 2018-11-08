@@ -1,0 +1,182 @@
+{
+  "basics": {
+    "name": "Jean-Baptiste Morice",
+    "label": "Computer Graphics Engineer",
+    "image": "",
+    "email": "mail@jbmorice.com",
+    "phone": "+33 (0)6 84 88 72 85",
+    "url": "https://jbmorice.com",
+    "summary": "I am an engineering student at ESIR (École Supérieure d’Ingénieurs de Rennes). In 2018 I will hold an engineering degree in computer science specialized in computer graphics and digital image processing. I relish challenges and I am equally comfortable working in a team or on my own.",
+    "location": {
+      "address": "11 rue de Hoëdic",
+      "postalCode": "35135",
+      "city": "Chantepie",
+      "countryCode": "FR",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "jbmorice",
+        "url": ""
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "B<>COM",
+      "location": "Cesson-Sévigné, France",
+      "description": "The IRT b<>com is one of the eight Technological Research Institutes certified by the French State in 2012. Its mission is to accelerate, through research and innovation in digital technologies, the development and marketing of tools, products and services that make everyday life easier.",
+      "position": "Virtual Reality R&D Engineer Intern",
+      "url": "https://b-com.com/en",
+      "startDate": "March",
+      "endDate": "September 2018",
+      "summary": "Studied interactions in virtual reality between synthetic 3D content (produced by a graphic designer) and content captured from reality (photogrammetry, 360 photos & videos, etc.). Development of demonstrators highlighting the technological barriers.",
+      "highlights": []
+    },
+    {
+      "name": "SOGITEC",
+      "location": "Bruz, France",
+      "description": "Sogitec Industries, a subsidiary of Dassault Aviation, is a leader in support products & services for Aerospace systems.",
+      "position": "3D Engine R&D Engineer Intern",
+      "url": "http://www.sogitec.com",
+      "startDate": "June",
+      "endDate": "September 2017",
+      "summary": "Evaluation of Vulkan as a replacement for OpenGL inside a 3D engine. Converted a subset of the engine and assessed the performance gain.",
+      "highlights": []
+    },
+    {
+      "name": "FIT-SA",
+      "location": "Rennes, France",
+      "description": "FIT-SA distributes dairy industrial ingredients to agri-food processors thaks to its xtensive know-how of techniques, products and markets. Its priority: to serve its customers with a perfect service.",
+      "position": "IT Project Manager Intern",
+      "url": "http://www.fitsa-group.com",
+      "startDate": "June",
+      "endDate": "August 2016",
+      "summary": "Initiated and planned a company wide improvement project for the company’s information system. Performed needs assessments and expressed functional specifications for the improvement of the actual enterprise resource planning software and for a future customer relationship management software.",
+      "highlights": []
+    },
+    {
+      "name": "MPO France",
+      "location": "Vilaines-La-Juhel, France",
+      "description": "FIT-SA distributes dairy industrial ingredients to agri-food processors thaks to its xtensive know-how of techniques, products and markets. Its priority: to serve its customers with a perfect service.",
+      "position": "Software Developer Intern",
+      "url": "https://www.mpo-international.com",
+      "startDate": "April",
+      "endDate": "August 2015",
+      "summary": "Functional analysis, design and development of a software interface between a desktop publishing workflow engine and a manufacturing execution system.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "CoderDojo",
+      "position": "Teacher",
+      "url": "http://coderdojo.example.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Global movement of free coding clubs for young people.",
+      "highlights": [
+        "Awarded 'Teacher of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "École Supérieure d'Ingénieurs de Rennes (ESIR)",
+      "area": "Information Technology",
+      "studyType": "Engineering Degree",
+      "startDate": "2015",
+      "endDate": "2018",
+      "gpa": "",
+      "courses": [
+        "Digital image processing",
+        "Computer graphics (real-time rendering, ray-tracing, global illumination...)",
+        "Machine learning",
+        "Computer vision",
+        "Video compression"
+      ]
+    },
+    {
+      "institution": "Institut Universitaire de Technologie de Laval",
+      "area": "Information Technology",
+      "studyType": "Two year technical degree",
+      "startDate": "2013",
+      "endDate": "2015",
+      "gpa": "",
+      "courses": [
+        "Information system analysis and development",
+        "Programming",
+        "Software architecture",
+        "Database management",
+        "Operating systems",
+        "Network management"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Digital Compression Pioneer Award",
+      "date": "2014-11-01",
+      "awarder": "Techcrunch",
+      "summary": "There is no spoon."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "level": "",
+      "keywords": [
+        "C",
+        "C++",
+        "C#",
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "Computer Graphics",
+      "level": "",
+      "keywords": [
+        "Unity",
+        "OpenGL",
+        "GLSL",
+        "Vulkan"
+      ]
+    },
+    {
+      "name": "Personal",
+      "level": "",
+      "keywords": [
+        "Teamwork",
+        "Communication",
+        "Project Management",
+        "Agile Software Development"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced (CEFR C1)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}

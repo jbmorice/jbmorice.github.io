@@ -1,2 +1,18 @@
-_site/*
-*.lock
+### Hugo ###
+# Hugo binary
+hugo*.exe
+
+# Generated files at default location
+/public/
+/resources/_gen
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
