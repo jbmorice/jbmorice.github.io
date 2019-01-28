@@ -2,11 +2,11 @@
   "basics": {
     "name": "Jean-Baptiste Morice",
     "label": "Computer Graphics Engineer",
-    "image": "",
+    "image": "/mnt/d/Documents/Development/jbmorice.github.io/static/id_picture.jpg",
     "email": "mail@jbmorice.com",
     "phone": "+33 (0)6 84 88 72 85",
     "url": "https://jbmorice.com",
-    "summary": "I am an engineering student at ESIR (École Supérieure d’Ingénieurs de Rennes). In 2018 I will hold an engineering degree in computer science specialized in computer graphics and digital image processing. I relish challenges and I am equally comfortable working in a team or on my own.",
+    "summary": "I am a recently graduated computer engineer specialized in computer graphics and digital image processing. I am especially passionate about rendering and I am currently looking for a first professional experience as a developer on projects involving innovative rendering technologies.",
     "location": {
       "address": "11 rue de Hoëdic",
       "postalCode": "35135",
@@ -16,9 +16,14 @@
     },
     "profiles": [
       {
+        "network": "LinkedIn",
+        "username": "jean-baptiste-morice",
+        "url": "https://www.linkedin.com/in/jean-baptiste-morice/"
+      },
+      {
         "network": "Github",
         "username": "jbmorice",
-        "url": ""
+        "url": "https://github.com/jbmorice"
       }
     ]
   },
@@ -38,46 +43,46 @@
       "name": "SOGITEC",
       "location": "Bruz, France",
       "description": "Sogitec Industries, a subsidiary of Dassault Aviation, is a leader in support products & services for Aerospace systems.",
-      "position": "3D Engine R&D Engineer Intern",
+      "position": "3D Rendering Engineer Intern",
       "url": "http://www.sogitec.com",
       "startDate": "June",
       "endDate": "September 2017",
-      "summary": "Evaluation of Vulkan as a replacement for OpenGL inside a 3D engine. Converted a subset of the engine and assessed the performance gain.",
+      "summary": "Evaluation of Vulkan as a replacement for OpenGL inside a 3D rendering engine. Converted a subset of the engine and assessed the performance gain.",
       "highlights": []
     },
     {
-      "name": "FIT-SA",
+      "name": "FIT",
       "location": "Rennes, France",
-      "description": "FIT-SA distributes dairy industrial ingredients to agri-food processors thaks to its xtensive know-how of techniques, products and markets. Its priority: to serve its customers with a perfect service.",
+      "description": "FIT distributes dairy industrial ingredients to agri-food processors thaks to its xtensive know-how of techniques, products and markets.",
       "position": "IT Project Manager Intern",
-      "url": "http://www.fitsa-group.com",
+      "url": "http://www.fitsa-group.com/en/",
       "startDate": "June",
       "endDate": "August 2016",
       "summary": "Initiated and planned a company wide improvement project for the company’s information system. Performed needs assessments and expressed functional specifications for the improvement of the actual enterprise resource planning software and for a future customer relationship management software.",
       "highlights": []
     },
     {
-      "name": "MPO France",
+      "name": "MPO",
       "location": "Vilaines-La-Juhel, France",
-      "description": "FIT-SA distributes dairy industrial ingredients to agri-food processors thaks to its xtensive know-how of techniques, products and markets. Its priority: to serve its customers with a perfect service.",
+      "description": "MPO is a company specializing in the manufacture and packaging of media and data storage media (CD, DVD, vinyl and Blu-Ray discs) for record companies or independent producers.",
       "position": "Software Developer Intern",
-      "url": "https://www.mpo-international.com",
+      "url": "https://www.mpo.fr",
       "startDate": "April",
       "endDate": "August 2015",
-      "summary": "Functional analysis, design and development of a software interface between a desktop publishing workflow engine and a manufacturing execution system.",
+      "summary": "Functional analysis, design, and development of a software interface between a desktop publishing workflow engine and a manufacturing execution system.",
       "highlights": []
     }
   ],
   "volunteer": [
     {
-      "organization": "CoderDojo",
-      "position": "Teacher",
-      "url": "http://coderdojo.example.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Global movement of free coding clubs for young people.",
+      "organization": "ISATI (ESIR's Student Office)",
+      "position": "Events Coordinator",
+      "url": "",
+      "startDate": "2015",
+      "endDate": "2016",
+      "summary": "Planning, budgeting, scheduling and management of various events aimed toward ESIR students'.",
       "highlights": [
-        "Awarded 'Teacher of the Month'"
+        ""
       ]
     }
   ],
@@ -90,36 +95,36 @@
       "endDate": "2018",
       "gpa": "",
       "courses": [
-        "Digital image processing",
-        "Computer graphics (real-time rendering, ray-tracing, global illumination...)",
-        "Machine learning",
-        "Computer vision",
-        "Video compression"
+        "digital image processing",
+        "computer graphics (real-time rendering, ray tracing, global illumination, etc.)",
+        "machine learning",
+        "computer vision",
+        "video compression"
       ]
     },
     {
       "institution": "Institut Universitaire de Technologie de Laval",
       "area": "Information Technology",
-      "studyType": "Two year technical degree",
+      "studyType": "Two-year Technical Degree",
       "startDate": "2013",
       "endDate": "2015",
       "gpa": "",
       "courses": [
-        "Information system analysis and development",
-        "Programming",
-        "Software architecture",
-        "Database management",
-        "Operating systems",
-        "Network management"
+        "information system analysis and development",
+        "programming",
+        "software architecture",
+        "database management",
+        "operating systems",
+        "network management"
       ]
     }
   ],
   "awards": [
     {
-      "title": "Digital Compression Pioneer Award",
-      "date": "2014-11-01",
-      "awarder": "Techcrunch",
-      "summary": "There is no spoon."
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "summary": ""
     }
   ],
   "skills": [
@@ -162,15 +167,28 @@
     },
     {
       "language": "English",
-      "fluency": "Advanced (CEFR C1)"
+      "fluency": "Advanced (TOEIC 990/990 - CEFR C1)"
     }
   ],
   "interests": [
     {
-      "name": "Wildlife",
+      "name": "Music"
+    },
+    {
+      "name": "Sports",
       "keywords": [
-        "Ferrets",
-        "Unicorns"
+        "Judo",
+        "Table-Tennis"
+      ]
+    },
+    {
+      "name": "Travelling",
+      "keywords": [
+        "England",
+        "Ireland",
+        "Germany",
+        "Turkey",
+        "Czech-Republic"
       ]
     }
   ],

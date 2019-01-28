@@ -1,0 +1,197 @@
+{
+    "basics": {
+      "name": "Jean-Baptiste Morice",
+      "label": "Ingénieur en Informatique Graphique",
+      "image": "/mnt/d/Documents/Development/jbmorice.github.io/static/id_picture.jpg",
+      "email": "mail@jbmorice.com",
+      "phone": "06 84 88 72 85",
+      "url": "https://jbmorice.com",
+      "summary": "Je suis un ingénieur en informatique récemment diplômé et spécialisé en informatique graphique et en traitement d'images. Je suis particulièrement passionné de rendu et je suis actuellement à la recherche d'une première expérience professionnelle en tant que développeur sur des projets impliquant des technologies de rendu innovantes.",
+      "location": {
+        "address": "11 rue de Hoëdic",
+        "postalCode": "35135",
+        "city": "Chantepie",
+        "countryCode": "FR",
+        "region": ""
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "jean-baptiste-morice",
+          "url": "https://www.linkedin.com/in/jean-baptiste-morice/"
+        },
+        {
+          "network": "Github",
+          "username": "jbmorice",
+          "url": "https://github.com/jbmorice"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "B<>COM",
+        "location": "Cesson-Sévigné, France",
+        "description": "L'IRT b<>com est l'un des huit instituts de recherche technologique certifiés par l'Etat français en 2012. Sa mission est d'accélérer, par la recherche et l'innovation dans les technologies numériques, le développement et la commercialisation d'outils, de produits et de services qui facilitent la vie quotidienne.",
+        "position": "Ingénieur R&D Réalité Virtuelle Stagiaire",
+        "url": "https://b-com.com",
+        "startDate": "Mars",
+        "endDate": "Septembre 2018",
+        "summary": "Étude des interactions en réalité virtuelle entre le contenu 3D synthétique (produit par un graphiste) et le contenu capturé à partir de la réalité (photogrammétrie, photos et vidéos 360, etc.). Développement de démonstrateurs mettant en évidence les barrières technologiques.",
+        "highlights": []
+      },
+      {
+        "name": "SOGITEC",
+        "location": "Bruz, France",
+        "description": "Sogitec Industries, filiale de Dassault Aviation, est un leader des produits et services de support pour les systèmes aérospatiaux.",
+        "position": "Ingénieur Rendu 3D Stagiaire",
+        "url": "http://www.sogitec.fr",
+        "startDate": "Juin",
+        "endDate": "Septembre 2017",
+        "summary": "Évaluation de l’API graphique Vulkan comme remplacement de OpenGL pour un générateur d’images 3D temps-réel. Implémentation sur un sous-ensemble du programme et évaluation des gains de performance.",
+        "highlights": []
+      },
+      {
+        "name": "FIT",
+        "location": "Rennes, France",
+        "description": "FIT distribue des ingrédients industriels laitiers aux transformateurs agroalimentaires grâce à son vaste savoir-faire des techniques, des produits et des marchés.",
+        "position": "Responsable de Projet Informatique Stagiaire",
+        "url": "http://www.fitsa-group.com/",
+        "startDate": "Juin",
+        "endDate": "Août 2016",
+        "summary": "Structuration et planification d’un projet d’amélioration du système d’information de l’entreprise. Analyse et formulation des besoins pour un outil de gestion de la relation client. Maintenance et amélioration d’un système de business intelligence.",
+        "highlights": []
+      },
+      {
+        "name": "MPO France",
+        "location": "Vilaines-La-Juhel, France",
+        "description": "MPO est une entreprise spécialisée dans la fabrication et le packaging de supports de médias et de stockage de données ( CD, DVD, disques vinyles et Blu-Ray) pour le compte de maisons de disques ou de producteurs indépendants.",
+        "position": "Analyste-Développeur Stagiaire",
+        "url": "https://www.mpo.fr/fr/",
+        "startDate": "Avril",
+        "endDate": "Août 2015",
+        "summary": "Analyse, conception et développement d’une interface entre un flux de production et un système de gestion des processus industriels.",
+        "highlights": []
+      }
+    ],
+    "volunteer": [
+      {
+        "organization": "ISATI (Bureau des Étudiants de l'ESIR)",
+        "position": "Responsable Événements",
+        "url": "",
+        "startDate": "2015",
+        "endDate": "2016",
+        "summary": "Planification, budgétisation, organisation et gestion de divers événements destinés aux étudiants de l'ESIR.",
+        "highlights": [
+          ""
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "École Supérieure d'Ingénieurs de Rennes (ESIR)",
+        "area": "Information Technology",
+        "studyType": "Diplôme d'Ingénieur",
+        "startDate": "2015",
+        "endDate": "2018",
+        "gpa": "",
+        "courses": [
+          "traitement d’images",
+          "synthèse d’images (temps-réel, lancer de rayons, illumination globale, etc.)",
+          "apprentissage automatique",
+          "vision par ordinateur",
+          "compression vidéo"
+        ]
+      },
+      {
+        "institution": "Institut Universitaire de Technologie (IUT) de Laval",
+        "area": "Information Technology",
+        "studyType": "Diplôme Universitaire de Technologie (DUT)",
+        "startDate": "2013",
+        "endDate": "2015",
+        "gpa": "",
+        "courses": [
+          "analyse et conception des systèmes d’information",
+          "programmation",
+          "architecture logicielle",
+          "gestion de bases de données",
+          "systèmes d'exploitation",
+          "réseaux"
+        ]
+      }
+    ],
+    "awards": [
+      {
+        "title": "Défi Prise en compte du handicap",
+        "date": "Novembre 2013",
+        "awarder": "Nuit de l'Info 2013 & Oracle",
+        "summary": "https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2013:defis:prise_en_compte_du_handicap:start"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Programmation",
+        "level": "",
+        "keywords": [
+          "C",
+          "C++",
+          "C#",
+          "Java",
+          "Python"
+        ]
+      },
+      {
+        "name": "Programmation Graphique",
+        "level": "",
+        "keywords": [
+          "Unity",
+          "OpenGL",
+          "GLSL",
+          "Vulkan"
+        ]
+      },
+      {
+        "name": "Personnelles",
+        "level": "",
+        "keywords": [
+          "Travail en Équipe",
+          "Communication",
+          "Gestion de Projet",
+          "Méthodes Agiles"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "Anglais",
+        "fluency": "Avancé (TOEIC 990/990 - CEFR C1)"
+      }
+    ],
+    "interests": [
+      {
+        "name": "Musique"
+      },
+      {
+        "name": "Sports",
+        "keywords": [
+          "Judo",
+          "Tennis de Table"
+        ]
+      },
+      {
+        "name": "Voyages",
+        "keywords": [
+          "Angleterre",
+          "Irlande",
+          "Allemagne",
+          "Turquie",
+          "République Tchèque"
+        ]
+      }
+    ],
+    "meta": {
+      "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+      "version": "v1.0.0",
+      "lastModified": "2017-12-24T15:53:00"
+    }
+  }
+  
