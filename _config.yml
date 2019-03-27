@@ -67,7 +67,7 @@ analytics:
 # Site Author
 author:
   name             : "Jean-Baptiste Morice"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /assets/images/resume/id_picture.jpg
   bio              : ""
   location         : "Rennes, France"
   email            : "mail@jbmorice.com"
@@ -79,19 +79,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : jbmorice
+  github           : "jbmorice"
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : jean-baptiste-morice
+  linkedin         : "jean-baptiste-morice"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : jbmorice
+  twitter          : "jbmorice"
   vine             :
   weibo            :
   xing             :
@@ -214,6 +214,11 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
 
 # HTML Compression
 # - http://jch.penibelst.de/
@@ -236,3 +241,11 @@ defaults:
       comments: true
       share: true
       related: true
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: false
+      share: true

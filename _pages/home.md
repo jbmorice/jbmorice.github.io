@@ -1,5 +1,5 @@
 ---
-title     : "Jean-Baptiste Morice's Resume"
+title     : "Jean-Baptiste Morice's Portfolio"
 layout    : resume
 permalink : /
 
@@ -11,17 +11,21 @@ banner:
   id_picture_url            : /assets/images/resume/id_picture.jpg
   hook_text                 : "Hi, I'm **Jean-Baptiste Morice** !"
   welcome_text              : |
-    Welcome to my personal website.
+    Welcome to my portfolio website.
   button_label              : "Learn more about me"
-  button_url                : "#experiences"
+  button_url                : "#summary"
 
 # Summary block configuration
 summary :
 #  title_text: "Intro"
   text : |
-    I am an engineering student at ESIR (École Supérieure d’Ingénieurs de Rennes). In 2018 I will hold an engineering degree in computer science specialized in computer graphics and digital image processing. I relish challenges and I am equally comfortable working in a team or on my own.
+    Hello, my name is Jean-Baptiste Morice and I have recently graduated from [ESIR (École Supérieure d’Ingénieurs de Rennes)](https://esir.univ-rennes1.fr/en) as a **Software Engineer** specialized in **Computer Graphics** and **Digital Image Processing**.
 
-    [Download my resume](/assets/files/jean-baptiste_morice_resume.pdf){: .btn .btn--primary .btn--large}
+    My main interests are **rendering** techniques (real-time and non real-time), **video game development**, **virtual reality** and **augmented reality**.
+
+    I am currently looking for a job as a C++ developer on a project involving any of my main interests.
+
+    [Download my resume](/resume){: .btn .btn--primary .btn--large}
 
 # Work experiences
 experiences :
@@ -57,7 +61,8 @@ experiences :
     start_date          : June
     end_date            : August 2016
     short_summary       : |
-        Initiated and planned a company wide improvement project for the company’s information system. Performed needs assessments and expressed functional specifications for the improvement of the actual enterprise resource planning software and for a future customer relationship management software.
+        Initiated and planned an improvement project for the company’s information system. Performed needs assessments and expressed functional specifications for the improvement of the current enterprise resource planning software and for the purchase of a future customer relationship
+        management software.
     detailed_summary    :
     timeline_icon_url   : /assets/images/resume/timeline_icon_milk_bottle.png
 
@@ -109,8 +114,8 @@ skill_categories :
     background_color : "#4B4B4C"
     text_color       :
     skills           :
-    -   name  : C
-        icon  : devicon-c-plain
+    # -   name  : C
+    #     icon  : devicon-c-plain
     -   name  : C++
         icon  : devicon-cplusplus-plain
     -   name  : C#
@@ -153,6 +158,28 @@ contact :
   mail_catchphrase   : "Send me an email at : "
   social_enabled     : true
   #social_catchphrase :
+
+projects :
+# -   name        : GRASP
+#     url         : /projects/grasp
+#     image_url   : /assets/images/resume/grasp_teaser.png
+#     description : |
+#         A small personal project I am currently working on. The goal is to build a C++ cross-platform application framework allowing to kickstart a small rendering application.
+-   name        : Long Live The King
+    url         : /projects/longlivetheking
+    image_url   : /assets/images/resume/longlivetheking_teaser.png
+    description : |
+        This is a group project done at ESIR for our video games module.
+-   name        : Advanced Rendering Module
+    url         : /projects/advanced_rendering_module
+    image_url   : /assets/images/resume/advanced_rendering_module_teaser.png
+    description : |
+        This is a group project done at ESIR for our Advanced Rendering module.
+-   name        : Rendering Module
+    url         : /projects/rendering_module
+    image_url   : /assets/images/resume/rendering_module_teaser.png
+    description : |
+        This is a group project done at ESIR for our Rendering module.
 
 attributions :
 -   "Banner image from [Crytek Sponza scene rendered in Babylon.js](https://www.babylonjs.com/demos/sponza/)"

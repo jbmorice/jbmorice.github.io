@@ -1,0 +1,43 @@
+{% if page.projects %}
+<div class="feature__wrapper">
+  <h1 id="projects" style="text-align: center;"><i class="fas fa-code-branch"></i> My projects</h1>
+  
+  <div class="entries-grid">
+    {% assign projects = site.projects %}
+    {% assign projects = projects | sort: 'order' | reverse %}
+
+    {% for project in projects %}
+
+      <!-- Sanitize project image url -->
+      {% if project.header.teaser contains "://" %}
+        {% capture teaser %}{{ project.header.teaser }}{% endcapture %}
+      {% else %}
+        {% capture teaser %}{{ project.header.teaser | absolute_url }}{% endcapture %}
+      {% endif %}
+
+      <!-- Sanitize project url -->
+      {% if project.link contains "://" %}
+        {% capture url %}{{ project.url }}{% endcapture %}
+      {% else %}
+        {% capture url %}{{ project.url | absolute_url }}{% endcapture %}
+      {% endif %}
+
+      <div class="grid__item">
+        <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+          {% if project.header.teaser %}
+          <div class="archive__item-teaser">
+            <img src="{{ teaser }}" alt="">
+          </div>
+          {% endif %}
+          <a href="{{ url }}" rel="permalink" style="color: inherit; text-decoration: inherit;">
+            <h2 class="archive__item-title" itemprop="headline">
+              {{ project.title }}
+            </h2>
+          </a>
+          <p class="archive__item-excerpt" itemprop="description">{{ project.excerpt }}</p>
+        </article>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
