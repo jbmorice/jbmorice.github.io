@@ -1,7 +1,7 @@
 ---
 title: "Advanced Rendering Module"
 order: 2
-excerpt: "Several rendering algorithm implementations (scene graph, inverse kinematic, spring-mass system) done as a school project."
+excerpt: "Several animation related algorithms implementations (scene graph, inverse kinematic, spring-mass system) done as a school project."
 header:
   teaser: /assets/images/projects/02_advanced_rendering_module/teaser.png
 sidebar:
