@@ -21,9 +21,9 @@ summary :
   text : |
     Hello, my name is Jean-Baptiste Morice and I have recently graduated from [ESIR (École Supérieure d’Ingénieurs de Rennes)](https://esir.univ-rennes1.fr/en) as a **software engineer** specialized in **computer graphics** and **digital image processing**.
 
-    My main interests are **rendering** (real-time and non real-time), **video game development**, **virtual reality** and **augmented reality**.
+    My main interests are **computer graphics**, with an emphasis on **rendering** (real-time and non real-time), as well as **virtual reality** and **augmented reality**.
 
-    I am currently looking for a job as a C++ developer on a project involving any of my main interests.
+    I am currently looking for a job as a software engineer on a project involving any of my main interests.
 
     [Download my resume](/resume){: .btn .btn--primary .btn--large}
 
@@ -197,11 +197,4 @@ attributions :
 #     startDate:
 #     endDate:
 #     summary:
-#
-# # Projects
-# -   project:
-#     role:
-#     startDate:
-#     endDate:
-#     description: 
 ---
